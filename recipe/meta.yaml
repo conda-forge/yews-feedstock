@@ -1,6 +1,6 @@
 {% set name = "yews" %}
-{% set version = "0.0.1" %}
-{% set sha256 = "0f5ef8c0fcf5892ebe7c17205f11d22e8b6db01c1ce7df45850d5337f98975db" %}
+{% set version = "0.0.4" %}
+{% set sha256 = "68d4660e1996508ea6515965b02dfd5b5e9bf73db99c1f5e8c17230e836f5b90" %}
 
 package:
   name: {{ name|lower }}
