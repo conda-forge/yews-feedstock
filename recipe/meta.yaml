@@ -28,6 +28,7 @@ requirements:
     - numpy
     - scipy
     - pytorch-cpu >1.0.0
+    - setuptools
 
 test:
   imports:
