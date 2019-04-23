@@ -1,6 +1,6 @@
 {% set name = "yews" %}
-{% set version = "0.0.2" %}
-{% set sha256 = "6aed5ea0ae8fff60a07a22b7e34909c0cbe90128a2e466d2ab1aa5c741425635" %}
+{% set version = "0.0.4" %}
+{% set sha256 = "68d4660e1996508ea6515965b02dfd5b5e9bf73db99c1f5e8c17230e836f5b90" %}
 
 
 package:
@@ -20,11 +20,15 @@ requirements:
   host:
     - pip
     - python >=3.6
+    - pytest-runner
+    - scipy
+    - pytorch-cpu >1.0.0
   run:
     - python >=3.6
     - numpy
     - scipy
     - pytorch-cpu >1.0.0
+    - setuptools
 
 test:
   imports:
