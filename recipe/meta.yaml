@@ -21,14 +21,13 @@ requirements:
     - pip
     - python >=3.6
     - pytest-runner
-    - scipy
-    - pytorch-cpu >1.0.0
   run:
     - python >=3.6
     - numpy
     - scipy
     - pytorch-cpu >1.0.0
-    - setuptools
+    - obspy
+    - tqdm
 
 test:
   imports:
