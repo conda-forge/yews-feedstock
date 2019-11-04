@@ -35,8 +35,8 @@ test:
 
 about:
   home: https://github.com/lijunzh/yews
-  license: MIT
-  license_family: MIT
+  license: Apache 2.0
+  license_family: APACHE
   license_file: LICENSE
   summary: 'Yews: Your Earthquake Waveform Solutions.'
 
