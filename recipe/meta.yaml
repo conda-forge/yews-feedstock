@@ -19,10 +19,10 @@ build:
 requirements:  
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - pytest-runner
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
     - pytorch >=1.0.0
@@ -32,6 +32,8 @@ requirements:
 test:
   imports:
     - yews
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lijunzh/yews
