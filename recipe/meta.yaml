@@ -8,34 +8,37 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}  
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:  
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
     - pytest-runner
+    - setuptools
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - numpy
     - scipy
-    - pytorch-cpu >1.0.0
+    - pytorch >=1.0.0
     - obspy
     - tqdm
 
 test:
   imports:
     - yews
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://github.com/lijunzh/yews
-  license: Apache 2.0
+  license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
   summary: 'Yews: Your Earthquake Waveform Solutions.'
